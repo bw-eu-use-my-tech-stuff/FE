@@ -32,18 +32,18 @@ function Home() {
               >
                 How it Works
               </Link>
-              <a
+              <Link
                 className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3"
-                href="/"
+                to="/pricing"
               >
                 Pricing
-              </a>
-              <a
+              </Link>
+              <Link
                 className="f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3"
-                href="/"
+                to="/about"
               >
                 About
-              </a>
+              </Link>
               <Link className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba">
                 Login
               </Link>

@@ -7,7 +7,9 @@ const Register = props => {
     username: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
+    buyer: "",
+    seller: ""
   });
 
   const changeHandler = event => {
@@ -63,6 +65,29 @@ const Register = props => {
                   value={user.confirmPassword}
                   required
                 />
+                <legend className="fw7 mb2">Register as a...</legend>
+                <div>
+                  <input
+                    className="mr2"
+                    type="checkbox"
+                    name="buyer"
+                    onChange={changeHandler}
+                    value={user.buyer}
+                    required
+                  ></input>
+                  <label className="1h-copy">Buyer</label>
+                </div>
+                <div>
+                  <input
+                    className="mr2"
+                    type="checkbox"
+                    name="seller"
+                    onChange={changeHandler}
+                    value={user.seller}
+                    required
+                  ></input>
+                  <label className="1h-copy">Seller</label>
+                </div>
               </div>
             </div>
           </div>

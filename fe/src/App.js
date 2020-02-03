@@ -5,6 +5,8 @@ import Register from "./components/register";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Works from "./components/Works";
+import pricing from "./components/pricing";
+import about from "./components/About";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <Route path="/works" component={Works} />
+      <Route path="/pricing" component={pricing} />
+      <Route path="/about" component={about} />
     </div>
   );
 }
