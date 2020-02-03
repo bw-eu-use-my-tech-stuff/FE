@@ -57,12 +57,12 @@ function Home() {
             <h2 className="fw1 f3 white-80 mt3 mb4">
               Borrow Peoples Tech Equiptment, Share with Others
             </h2>
-            <a
+            <Link
+              to="/login"
               className="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3"
-              href="/"
             >
               Start Today
-            </a>
+            </Link>
           </div>
         </div>
       </div>
