@@ -6935,5 +6935,10 @@ html {
     .v-btm-l {
       vertical-align: bottom;
     }
+    .left{
+      position:absolute;
+      left:0;
+      top:0;
+    }
   }
   
