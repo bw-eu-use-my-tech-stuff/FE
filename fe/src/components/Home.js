@@ -2,6 +2,12 @@ import React from "react";
 import rent from "../images/rent.png";
 import Keyboard from "../images/keyboard.jpg";
 import TV from "../images/tv-icon.png";
+import Comp from "../images/computer-icon.png";
+import Cam from "../images/camera-icon.png";
+import Fridge from "../images/fridge-icon.png";
+import Audio from "../images/music-note-icon.png";
+import Gadge from "../images/gadgets-icon.png";
+import Footer from "../components/footer";
 import "../styles/tachyon.css";
 import { Link } from "react-router-dom";
 
@@ -75,10 +81,49 @@ function Home() {
           See if there is anything you are interested in
         </h2>
       </div>
-      <div className="look-through"></div>
-      <a href="/">
-        <img src={TV} className="icon" />
-      </a>
+      <div className="set">
+        <div className="look-through">
+          <div className="tv">
+            <a href="/">
+              <img src={TV} className="icon" />
+            </a>
+            <p className="sub">TV & Home</p>
+          </div>
+
+          <div className="tv">
+            <a href="/">
+              <img src={Comp} className="icon" />
+            </a>
+            <p className="sub">Computer & Laptops</p>
+          </div>
+          <div className="tv">
+            <a href="/">
+              <img src={Cam} className="icon" />
+            </a>
+            <p className="sub cam">Cameras</p>
+          </div>
+          <div className="">
+            <a href="/">
+              <img src={Gadge} className="icon" />
+            </a>
+            <p className="sub">Gadgets & Ipads</p>
+          </div>
+
+          <div className="">
+            <a href="/">
+              <img src={Fridge} className="icon" />
+            </a>
+            <p className="sub">Home Appliances</p>
+          </div>
+          <div className="">
+            <a href="/">
+              <img src={Audio} className="icon" />
+            </a>
+            <p className="sub">Audio</p>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </header>
   );
 }
