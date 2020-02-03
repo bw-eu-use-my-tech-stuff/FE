@@ -1,0 +1,7 @@
+.loginForm{
+    margin: 0 auto;
+    width: 80%;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+}
