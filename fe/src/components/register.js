@@ -18,37 +18,32 @@ const Register = (props) => {
       const handleSubmit = event => {
         event.preventDefault();
         props.addUser(user)
-        // props.history.push('/protected');
-          console.log('reg: ',props.history)
       }
-
 return(
     <div className="pa4 black-80">
-            <form className="ba b--transparent ph0 mh0">
-                <div className='pa4 black-80'>
-                    <p className='db fw4 lh-copy f6'>
-                        <label>Username</label>
-                        <input type="text" name="username" onChange={changeHandler} value={user.username} required /></p>
-                    <p className='db fw4 lh-copy f6'>
-                        <label>Email</label>
-                        <input type="email" name="email" onChange={changeHandler} value={user.email} required/></p>
-                    <p className='db fw4 lh-copy f6'>
-                        <label>Password</label>
-                        <input type="password" name="password" onChange={changeHandler} value={user.password} required/>
-                    </p>
-                    <p className='db fw4 lh-copy f6'>
-                        <label>Confirm Password</label>
-                        <input type="password" name="confirmPassword" onChange={changeHandler} value={user.confirmPassword} required/>
-                    </p>
-                    <p></p>
-                    <div className='checkbox'>
-                        <input type='checkbox' name='tos' />
-                        <p>I agree to the Terms and Conditions</p>
-                    </div>
-                    <button type='submit' onClick={handleSubmit} >Join</button>
+        <form>
+            <div className="mt3">
+            <label className="db fw4 lh-copy f">Username</label>
+            <input className="pa2 input-reset ba bg-transparent w-100 measure" type="text" name="username" onChange={changeHandler} value={user.username} required />
+            <div className="mt3">
+            <label className="db fw4 lh-copy f">Email</label>
+            <input className="pa2 input-reset ba bg-transparent w-100 measure" type="email" name="email" onChange={changeHandler} value={user.username} required/>
+            <div className="mt3">
+            <label className="db fw4 lh-copy f">Password</label>
+            <input className="pa2 input-reset ba bg-transparent w-100 measure" type="password" name="password" onChange={changeHandler} value={user.password} required/>
+            <div className="mt3">
+            <label className="db fw4 lh-copy f">Confirm Password</label>
+            <input className="pa2 input-reset ba bg-transparent w-100 measure" type="password" name="confirmPassword" onChange={changeHandler} value={user.confirmPassword} required/>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div className="mt3">
+            <button className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type='submit' onClick={handleSubmit} >Join</button>
             </div>
         </form>
     </div>
-)
+    )
 }
+
 export default Register;
