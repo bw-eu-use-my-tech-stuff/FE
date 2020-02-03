@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../styles/tachyon.css';
+import Footer from './footer';
 
 const Register = (props) => {
 
@@ -41,6 +42,7 @@ return(
             <div className="mt3">
             <button className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type='submit' onClick={handleSubmit} >Join</button>
             </div>
+            <Footer/>
         </form>
     </div>
     )
