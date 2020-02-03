@@ -12,10 +12,6 @@ import "../styles/tachyon.css";
 import { Link } from "react-router-dom";
 
 function Home() {
-  // const goToLogin = (props) => {
-  //     console.log(props);
-  //     props.push('/login');
-
   return (
     <header className="sans-serif">
       <div
@@ -30,12 +26,12 @@ function Home() {
               </div>
             </div>
             <div className="dtc v-mid tr pa3">
-              <a
+              <Link
                 className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3"
-                href="/"
+                to="/works"
               >
                 How it Works
-              </a>
+              </Link>
               <a
                 className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3"
                 href="/"
@@ -85,39 +81,39 @@ function Home() {
         <div className="look-through">
           <div className="tv">
             <a href="/">
-              <img src={TV} className="icon" />
+              <img src={TV} className="icon" alt="/" />
             </a>
             <p className="sub">TV & Home</p>
           </div>
 
           <div className="tv">
             <a href="/">
-              <img src={Comp} className="icon" />
+              <img src={Comp} className="icon" alt="/" />
             </a>
             <p className="sub">Computer & Laptops</p>
           </div>
           <div className="tv">
             <a href="/">
-              <img src={Cam} className="icon" />
+              <img src={Cam} className="icon" alt="/" />
             </a>
             <p className="sub cam">Cameras</p>
           </div>
           <div className="">
             <a href="/">
-              <img src={Gadge} className="icon" />
+              <img src={Gadge} className="icon" alt="/" />
             </a>
             <p className="sub">Gadgets & Ipads</p>
           </div>
 
           <div className="">
             <a href="/">
-              <img src={Fridge} className="icon" />
+              <img src={Fridge} className="icon" alt="/" />
             </a>
             <p className="sub">Home Appliances</p>
           </div>
           <div className="">
             <a href="/">
-              <img src={Audio} className="icon" />
+              <img src={Audio} className="icon" alt="/" />
             </a>
             <p className="sub">Audio</p>
           </div>

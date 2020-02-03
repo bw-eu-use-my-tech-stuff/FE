@@ -22,6 +22,7 @@ const Register = props => {
   return (
     <div className="pa4 black-80">
       <form>
+        <h1 className="sans-serif">Register Today</h1>
         <div className="mt3">
           <label className="db fw4 lh-copy f">Username</label>
           <input

@@ -6977,5 +6977,11 @@ html {
     width: 75px;
     height: 75px;
     }
+    .right{
+      position: absolute;
+      right: 0;
+      width: 160px;
+      height: 160px;
+    }
   }
   
