@@ -1,6 +1,7 @@
 import React from "react";
 import rent from "../images/rent.png";
 import Keyboard from "../images/keyboard.jpg";
+import TV from "../images/tv-icon.png";
 import "../styles/tachyon.css";
 import { Link } from "react-router-dom";
 
@@ -74,6 +75,10 @@ function Home() {
           See if there is anything you are interested in
         </h2>
       </div>
+      <div className="look-through"></div>
+      <a href="/">
+        <img src={TV} className="icon" />
+      </a>
     </header>
   );
 }
