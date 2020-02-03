@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
 
-function Login() {
+function Login(props) {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -17,7 +17,9 @@ function Login() {
   const submitHandler = event => {
       event.preventDefault();
       console.log(user);
-  }
+      // Here add the object to the backend. 
+      // Here redirect the user.
+    }
 
   return (
     <div>
