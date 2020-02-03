@@ -66,6 +66,14 @@ function Home() {
           </div>
         </div>
       </div>
+      <div className="tc ph4">
+        <h1 class="f3 f2-m f1-l fw2 black-90 mv3">
+          Interested in Renting Today?
+        </h1>
+        <h2 class="f5 f4-m f3-l fw2 black-50 mt0 lh-copy">
+          See if there is anything you are interested in
+        </h2>
+      </div>
     </header>
   );
 }
