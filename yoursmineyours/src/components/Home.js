@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 import SearchForm from './SearchForm';
+import ItemsForRent from './ListOfRentItems';
 
 function Home() {
   return (
@@ -27,8 +28,7 @@ function Home() {
     </div>
   </div> 
 </header>
-
-
+<ItemsForRent/>
     </div>
   );
 }

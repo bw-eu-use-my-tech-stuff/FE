@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
 
-function Login(props) {
+function OwnerLogin(props) {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -13,6 +13,11 @@ function Login(props) {
           [event.target.name]: event.target.value
       });
   };
+  
+  const goToRegister = event => {
+
+    //Redirect to the register page. 
+  }
 
   const submitHandler = event => {
       event.preventDefault();
@@ -23,7 +28,7 @@ function Login(props) {
 
   return (
     <div>
-      <form className="loginForm" onSubmit={event => submitHandler(event)}>
+      <form className="loginForm">
         <label>Email:</label>
         <input
           type="text"
@@ -38,10 +43,11 @@ function Login(props) {
           name="password"
           onChange={event => changeHandler(event)}
         />
-        <button>Login</button>
+        <button onClick={event => submitHandler(event)}>Login</button>
+        <button onClick={event => goToRegister(event)} >Need to Register?</button>
       </form>
     </div>
   );
 }
 
-export default Login;
+export default OwnerLogin;
