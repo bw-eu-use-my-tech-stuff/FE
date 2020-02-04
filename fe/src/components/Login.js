@@ -16,9 +16,6 @@ function Login(props) {
   };
   const submitHandler = e => {
     e.preventDefault();
-    console.log(user);
-    // Here add the object to the backend.
-    // Here redirect the user.
   };
 
   return (
