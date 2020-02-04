@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Dashcard from "./dashcard";
 
 function dashboard() {
-  axios
-    .get("https://use-my-tech-stuff-eu.herokuapp.com/api/equipments")
-    .then(function(response) {
-      console.log(response);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
+  const [equip, getEquip] = useState([]);
+  
+  useEffect(() => {
+    axios
+      .get("https://use-my-tech-stuff-eu.herokuapp.com/api/equipments")
+      .then(response => {
+        console.log(response.data.results);
+        getEquip(response.data.results);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div>
@@ -56,6 +62,11 @@ function dashboard() {
           How it Works
         </Link>
       </nav>
+      <section>
+        {equip.map((equip, id) => {
+          return <Dashcard key={id} equip={equip} />;
+        })}
+      </section>
     </div>
   );
 }
