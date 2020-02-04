@@ -44,7 +44,10 @@ function Home() {
               >
                 About
               </Link>
-              <Link className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba">
+              <Link
+                to="/login"
+                className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba"
+              >
                 Login
               </Link>
               <Link
