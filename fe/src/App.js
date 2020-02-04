@@ -9,6 +9,7 @@ import pricing from "./components/pricing";
 import about from "./components/About";
 import dashboard from "./components/dashboard";
 
+
 function App() {
   return (
     <div>
