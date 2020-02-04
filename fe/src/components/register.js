@@ -42,7 +42,7 @@ const Register = props => {
               type="email"
               name="email"
               onChange={changeHandler}
-              value={user.username}
+              value={user.email}
               required
             />
             <div className="mt3">
