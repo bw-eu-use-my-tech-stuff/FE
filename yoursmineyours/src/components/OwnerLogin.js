@@ -3,7 +3,7 @@ import "../styles/Login.css";
 
 function OwnerLogin(props) {
   const [user, setUser] = useState({
-    email: "",
+    username: "",
     password: ""
   });
 
@@ -16,7 +16,9 @@ function OwnerLogin(props) {
   
   const submitHandler = event => {
       event.preventDefault();
-      // Here add the object to the backend. 
+      props.history.push('/ownerDashboard');
+      // Here add the object to the backend.
+      console.log(user); 
     }
 
     const goToRegister = event => { 
