@@ -8,7 +8,6 @@ function SearchForm(){
                 <input 
                 placeholder="What do you need"
                 />
-                <button>Find</button>
             </form>
         </div>
     )

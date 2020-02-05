@@ -8,7 +8,10 @@ function Home() {
     <div>
 
 <header className="sans-serif">
-  <div className="cover bg-left bg-center-l">
+<div className="cover bg-left bg-center-l">
+  {/* Make this a background image. */}
+  {/* <img src="http://mrmrs.github.io/photos/u/011.jpg"/> */}
+</div>
     <div className="bg-black-80 pb5 pb6-m pb7-l">
       <nav className="dt w-100 mw8 center"> 
         <div className="dtc w2 v-mid pa3">
@@ -20,7 +23,7 @@ function Home() {
           </a>
         </div>
         <div className="dtc v-mid tr pa3">
-          <a className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba" href="/login" >Rent your Equiptment</a> 
+          <a className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba" href="/login" >Rent your Equipment</a> 
         </div>
       </nav> 
       <div className="tc-l mt4 mt5-m mt6-l ph3">
@@ -29,11 +32,12 @@ function Home() {
         <SearchForm/>
       </div>
     </div>
-  </div> 
+  {/* </div>  */}
 </header>
 
 
-<div className="itemsForRentToFlex">
+<div className="containerForHome">
+  <h1>Rent Now:</h1>
 <ItemsForRent/>
 </div>
     </div>
