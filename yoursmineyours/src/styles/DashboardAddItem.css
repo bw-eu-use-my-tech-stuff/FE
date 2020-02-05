@@ -1,0 +1,10 @@
+Form{
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 50px 50px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}

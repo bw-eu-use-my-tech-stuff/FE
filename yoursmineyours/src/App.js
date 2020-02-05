@@ -6,6 +6,7 @@ import ForRentForm from './components/RentItemForm';
 import OwnerRegister from './components/OwnerRegister';
 import OwnerLogin from './components/OwnerLogin';
 import AddItem from './components/DashboardAddItem';
+import DashboardAfterOwnerLogin from './components/DashboardAfterOwnerLogin';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/register" component={OwnerRegister}/>
       <Route path="/addItem" component={AddItem}/>
       <Route path="/rentItem" component={ForRentForm}/>
+      <Route path="/ownerDashboard" component={DashboardAfterOwnerLogin}/>
     </div>
   );
 }
