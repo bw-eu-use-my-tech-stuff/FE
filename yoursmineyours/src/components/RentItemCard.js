@@ -13,7 +13,13 @@ padding: 20px 20px;
 const Text = styled.h3`
 font-family: Ariel;
 `
-
+const Button = styled.button`
+font-size: 1em;
+margin: 1em;
+color: orange;
+padding: 0.25em 1em;
+border-radius: 3px;
+`;
 
 function RentItemCard(props){
 
@@ -30,12 +36,13 @@ function RentItemCard(props){
             <p>{props.data.cost}</p>
             <Text>Description:</Text>
             <p>{props.data.description}</p>
-            <button onClick={rentItem}>Rent This item</button>
+            <Button onClick={rentItem}>Rent This item</Button>
         </Box>
     )
 }
 
 const rentItem = event => {
+    console.log('you clicked it');
     // console.log(props);
     // props.history.push('/renterlogin');
 }
