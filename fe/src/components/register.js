@@ -1,21 +1,27 @@
 import React, { useState } from "react";
 import "../styles/tachyon.css";
 import Footer from "./footer";
+import axios from "axios";
 
 const Register = props => {
   const [user, setUser] = useState({
     username: "",
     password: "",
-    account_type: ""
+    account_type: "owner"
   });
-
   const changeHandler = event => {
     event.preventDefault();
     setUser({ ...user, [event.target.name]: event.target.value });
   };
-
   const handleSubmit = event => {
     event.preventDefault();
+    console.log(user)
+    axios.post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/register', user)
+    .then(response => {
+      console.log(response)
+    }).catch(error => {
+      console.log(error)
+    }, [])
   };
   return (
     <div className="pa4 black-80">
@@ -53,8 +59,7 @@ const Register = props => {
           <button
             className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6"
             type="submit"
-            onClick={handleSubmit}
-          >
+            onClick={handleSubmit}>
             Join
           </button>
         </div>

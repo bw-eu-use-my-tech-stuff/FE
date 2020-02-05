@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "../styles/tachyon.css";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 function Login(props) {
   const [user, setUser] = useState({
-    email: "",
+    username: "",
     password: ""
   });
 
@@ -16,18 +17,25 @@ function Login(props) {
   };
   const submitHandler = e => {
     e.preventDefault();
+    console.log(user)
+    axios.post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/login', user)
+    .then(response => {
+      console.log(response)
+    }).catch(error => {
+      console.log(error)
+    }, [])
   };
 
   return (
     <div className="pa4 black-80">
       <form>
-        <label className="db fw4 lh-copy f6">Email</label>
+        <label className="db fw4 lh-copy f6">username</label>
         <input
           className="pa2 input-reset ba bg-transparent w-100 measure"
-          type="email"
-          name="email"
+          type="text"
+          name="username"
           onChange={changeHandler}
-          value={user.email}
+          value={user.username}
           required
         />
         <label className="db fw4 lh-copy f6">Password</label>
@@ -40,12 +48,12 @@ function Login(props) {
           required
         />
         <div className="mt3">
-          <button
+          <Link to ="/dashboard"
             onClick={event => submitHandler(event)}
             className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6"
           >
             Login
-          </button>
+          </Link>
           <Link to="/register">
             <button className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6">
               Register Today
