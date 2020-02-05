@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function OwnerDashboard(){
 
@@ -8,9 +9,16 @@ function OwnerDashboard(){
         price: ''
     });
 
+    useEffect(() => {
+    })
+
     const addItem = event => {
         event.preventDefault();
         console.log(item);
+    }
+
+    const changeHandler = event => {
+        
     }
 
     return(
