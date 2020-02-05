@@ -16,7 +16,7 @@ function OwnerLogin(props) {
   
   const submitHandler = event => {
       event.preventDefault();
-      props.history.push('/ownerDashboard');
+      props.history.push('/addItem');
       // Here add the object to the backend.
       console.log(user); 
     }
