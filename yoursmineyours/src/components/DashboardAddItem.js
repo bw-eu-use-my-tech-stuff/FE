@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import ReactDom from 'react-dom';
 import axios from "axios";
 import { withFormik, Form, Field } from "formik";
 import '../styles/DashboardAddItem.css';
+import * as Yup from 'yup';
 
 function DashboardAddItem() {
   return (
@@ -11,7 +13,8 @@ function DashboardAddItem() {
       <Field type="text" placeholder="Name" name="name" /><br></br>
       
       Category:
-      <Field name="category" as="select" placeholder="Category">
+      <Field 
+      name="category" as="select" placeholder="Category">
         <option value="camera">Cameras</option>
         <option value="houseHoldAppliance">Household Applicances</option>
         <option value="laptops">Laptops</option>
@@ -34,15 +37,20 @@ function DashboardAddItem() {
 const AddItem = withFormik({
   mapPropsToValues({ id, name, category, cost, available, description, owner_username }) {
     return {
-      id: "",
+      id: id || "",
       name: name || "",
       category: category || "",
       cost: cost || "",
-      available: 1,
+      available: available || 1,
       description: description || "",
-      owner_username: "null",
+      owner_username: owner_username || "null",
     };
   },
+
+  validationSchema: Yup.object().shape({
+    name: Yup.string().min(4, "You must give the item name").required(),
+    description: Yup.string().min(50, 'You must describe the item').required()
+  }),
 
   handleSubmit(values) {
     console.log(values);

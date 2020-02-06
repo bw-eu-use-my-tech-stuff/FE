@@ -26,6 +26,7 @@ function OwnerLogin(props) {
         props.history.push('/ownerDashboard');
       })
       .catch(error => {
+        alert('You must register before logging in.');
         console.log(error);
       });
     };

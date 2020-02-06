@@ -8,7 +8,6 @@ import OwnerLogin from './components/OwnerLogin';
 import AddItem from './components/DashboardAddItem';
 import DashboardAfterOwnerLogin from './components/DashboardAfterOwnerLogin';
 import RenterLogin from './components/RenterLogin';
-import renterRegister from './components/RenterRegister';
 import RenterRegister from './components/RenterRegister';
 
 function App() {

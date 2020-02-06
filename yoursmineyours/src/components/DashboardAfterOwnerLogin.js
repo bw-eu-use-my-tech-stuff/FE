@@ -1,5 +1,5 @@
 import React from "react";
-
+import NavBar from './NavBar';
 function DashboardAfterOwnerLogin(props) {
     
     const goToAddItem = (event) => {
@@ -10,6 +10,7 @@ function DashboardAfterOwnerLogin(props) {
     
   return (
     <div>
+      <NavBar/>
       <h1>Product Owner Dashboard</h1>
       <button onClick={goToAddItem}>Add Item</button>
       <button>Delete Item</button>
