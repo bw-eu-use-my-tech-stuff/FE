@@ -22,7 +22,7 @@ function Login(props) {
     axios.post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/login', user)
     .then(response => {
       console.log(response)
-      history.push('./dashboard')
+      props.history.push('./dashboard')
     }).catch(error => {
       console.log(error)
     }, [])

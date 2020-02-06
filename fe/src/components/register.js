@@ -3,7 +3,6 @@ import "../styles/tachyon.css";
 import Footer from "./footer";
 import axios from "axios";
 import history from './history';
-import Keyboard from "../images/keyboard.jpg";
 
 const Register = props => {
   const [user, setUser] = useState({
@@ -21,7 +20,7 @@ const Register = props => {
     axios.post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/register', user)
     .then(response => {
       console.log(response)
-      history.push('./dashboard')      
+      props.history.push('./dashboard')      
     }).catch(error => {
       console.log(error)
     }, [])
