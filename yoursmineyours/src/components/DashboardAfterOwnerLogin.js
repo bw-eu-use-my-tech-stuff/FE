@@ -10,6 +10,7 @@ function DashboardAfterOwnerLogin(props) {
     
   return (
     <div>
+      <h1>Product Owner Dashboard</h1>
       <button onClick={goToAddItem}>Add Item</button>
       <button>Delete Item</button>
     </div>

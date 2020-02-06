@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
+import axios from "axios";
 
 function OwnerLogin(props) {
   const [user, setUser] = useState({
     username: "",
-    password: ""
+    password: "",
+    account_type: "owner",
   });
 
   const changeHandler = event => {
@@ -16,39 +18,48 @@ function OwnerLogin(props) {
   
   const submitHandler = event => {
       event.preventDefault();
-      props.history.push('/ownerDashboard');
-      // Here add the object to the backend.
-      console.log(user); 
-    }
+
+      axios
+      .post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/login', user)
+      .then(response => {
+        console.log(response);
+        props.history.push('/ownerDashboard');
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    };
 
     const goToRegister = event => { 
       event.preventDefault();
-      props.history.push('/register');
+      props.history.push('/');
     }
 
   return (
     <div>
       <form className="loginForm">
+        <h1>Login:</h1>
         <label>Email:</label>
         <input
           type="text"
-          placeholder="email"
-          name="email"
+          placeholder="Username:"
+          name="username"
           onChange={event => changeHandler(event)}
         />
         <label>Password</label>
         <input
-          type="text"
+          type="password"
           placeholder="password"
           name="password"
           onChange={event => changeHandler(event)}
         />
         <button onClick={submitHandler}>Login</button>
-        <button onClick={event => goToRegister(event)}>Need to Register</button>
+        <button onClick={event => goToRegister(event)}>Need to Register?</button>
       </form>
     </div>
   );
 }
+
 
 
 

@@ -22,7 +22,6 @@ function ItemsForRent(){
         <div>
             {
               dataFromAPI.map((item, index) => {
-                // console.log(item);
                 return <RentItemCard key={index} data={item} />;
             })
             }
