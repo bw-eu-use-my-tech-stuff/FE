@@ -12,31 +12,35 @@ function DashboardAddItem() {
       
       Category:
       <Field name="category" as="select" placeholder="Category">
-        <option value="camera">Camera</option>
+        <option value="camera">Cameras</option>
+        <option value="houseHoldAppliance">Household Applicances</option>
+        <option value="laptops">Laptops</option>
         <option value="lighting">Lighting</option>
-        <option value="lens">Lens</option>
-        <option value="soundRecordingEquipment">
-          Sound Recording Equipment
-        </option>
+        <option value="lens">Lenses</option>
+        <option value="soundRecordingEquipment">Sound Recording Equipment</option>
+        <option value="videoRecordingEquipment">Video Recording Equipment</option>
         <option value="other">Other</option>
       </Field><br></br>
 
       Cost(Per day):
       <Field type="number" placeholder="Price" name="cost"/><br></br>
       Description:
-      <Field type="text" placeholder="description" name="description"/><br></br>
+      <Field type="text" placeholder="Description" name="description"/><br></br>
       <button>Add Item</button>
     </Form>
   );
 }
 
 const AddItem = withFormik({
-  mapPropsToValues({ name, cost, category, description }) {
+  mapPropsToValues({ id, name, category, cost, available, description, owner_username }) {
     return {
+      id: "",
       name: name || "",
-      cost: cost || "",
       category: category || "",
-      description: description || ""
+      cost: cost || "",
+      available: 1,
+      description: description || "",
+      owner_username: "null",
     };
   },
 

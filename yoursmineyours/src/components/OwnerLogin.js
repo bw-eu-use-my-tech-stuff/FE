@@ -18,7 +18,6 @@ function OwnerLogin(props) {
   
   const submitHandler = event => {
       event.preventDefault();
-
       axios
       .post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/login', user)
       .then(response => {
@@ -32,7 +31,7 @@ function OwnerLogin(props) {
 
     const goToRegister = event => { 
       event.preventDefault();
-      props.history.push('/');
+      props.history.push('/register');
     }
 
   return (

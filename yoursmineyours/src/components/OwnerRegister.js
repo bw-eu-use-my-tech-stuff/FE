@@ -18,23 +18,20 @@ function OwnerRegister(props) {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(event);
-    axios.post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/register', registrar)
-    .then(response => {
-      console.log(response);
-      props.history.push('/login');
-
-
-    })
-    .catch(error => {
-      console.log(error);
-    })
+    if(registrar.password.length < 8){
+      alert('Password must be at least 8 characters long.');
+      props.history.push('/register');
+    } else{ 
+      axios.post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/register', registrar)
+      .then(response => {
+        console.log(response);
+          props.history.push('/login');
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    }
   }
-
-  // const register = event => {
-  //     event.preventDefault();
-      // props.history.push('/login');
-  //   }
 
   return (
     <div>
@@ -54,20 +51,6 @@ function OwnerRegister(props) {
           name="password"
           onChange={event => changeHandler(event)}
         />
-
-        {/* <label>Account Type:</label>
-        <input 
-        type="text"
-        placeholder="Name"
-        name="name"
-        onChange={event => changeHandler(event)}
-        /> */}
-{/* 
-        <select onChange={changeHandler}> Account Type:
-          <option value="renter">Renter</option>
-          <option value="owner">Owner</option>
-        </select> */}
-
         <button>Register</button>
       </form>
     </div>
