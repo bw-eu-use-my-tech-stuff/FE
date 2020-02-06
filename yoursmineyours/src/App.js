@@ -8,6 +8,8 @@ import OwnerLogin from './components/OwnerLogin';
 import AddItem from './components/DashboardAddItem';
 import DashboardAfterOwnerLogin from './components/DashboardAfterOwnerLogin';
 import RenterLogin from './components/RenterLogin';
+import renterRegister from './components/RenterRegister';
+import RenterRegister from './components/RenterRegister';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <Route path="/rentItem" component={ForRentForm}/>
       <Route path="/ownerDashboard" component={DashboardAfterOwnerLogin}/>
       <Route path="/renterLogin" component={RenterLogin}/>
+      <Route path="/renterRegister" component={RenterRegister}/>
     </div>
   );
 }

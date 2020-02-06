@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
 import axios from "axios";
+import NavBar from './NavBar';
 
 function OwnerRegister(props) {
   const [registrar, setRegistrar] = useState({
@@ -35,6 +36,7 @@ function OwnerRegister(props) {
 
   return (
     <div>
+      <NavBar/>
       <form className="loginForm" onSubmit={handleSubmit}>
         <h1>Register</h1>
         <label>Username:</label>

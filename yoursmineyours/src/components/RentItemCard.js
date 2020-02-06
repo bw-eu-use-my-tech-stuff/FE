@@ -23,7 +23,7 @@ border-radius: 3px;
 
 function RentItemCard(props){
 
-    console.log('Props from RentItemCard: ' + props.data.name);
+    console.log(props);
 
     return(
 
@@ -43,8 +43,8 @@ function RentItemCard(props){
 
 const rentItem = event => {
     console.log('you clicked it');
-    // console.log(props);
-    // props.history.push('/renterlogin');
+    event.preventDefault();
+    // props.data.history.push('/renterRegister');
 }
 
 

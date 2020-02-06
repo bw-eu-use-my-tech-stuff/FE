@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
 import axios from "axios";
+import NavBar from './NavBar';
 
 function OwnerLogin(props) {
   const [user, setUser] = useState({
@@ -36,6 +37,7 @@ function OwnerLogin(props) {
 
   return (
     <div>
+      <NavBar/>
       <form className="loginForm">
         <h1>Login:</h1>
         <label>Email:</label>
