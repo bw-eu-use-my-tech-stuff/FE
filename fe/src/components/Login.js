@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/tachyon.css";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import history from './history';
 
 function Login(props) {
   const [user, setUser] = useState({
@@ -21,6 +22,7 @@ function Login(props) {
     axios.post('https://use-my-tech-stuff-eu.herokuapp.com/api/auth/login', user)
     .then(response => {
       console.log(response)
+      history.push('./dashboard')
     }).catch(error => {
       console.log(error)
     }, [])
@@ -48,11 +50,13 @@ function Login(props) {
           required
         />
         <div className="mt3">
-          <Link to ="/dashboard"
-            onClick={event => submitHandler(event)}
+          <Link to="/dashboard">
+          <button to ="/dashboard"
+            onClick={submitHandler}
             className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6"
           >
             Login
+          </button>
           </Link>
           <Link to="/register">
             <button className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6">

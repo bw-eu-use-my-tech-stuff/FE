@@ -83,41 +83,41 @@ function Home() {
       <div className="set">
         <div className="look-through">
           <div className="tv">
-            <a href="/">
+            <Link to="/tv">
               <img src={TV} className="icon" alt="/" />
-            </a>
+            </Link>
             <p className="sub">TV & Home</p>
           </div>
 
           <div className="tv">
-            <a href="/">
+            <Link to="/computers">
               <img src={Comp} className="icon" alt="/" />
-            </a>
+            </Link>
             <p className="sub">Computer & Laptops</p>
           </div>
           <div className="tv">
-            <a href="/">
+            <Link to="/cam">
               <img src={Cam} className="icon" alt="/" />
-            </a>
+            </Link>
             <p className="sub cam">Cameras</p>
           </div>
           <div className="">
-            <a href="/">
+            <Link to="/ipads">
               <img src={Gadge} className="icon" alt="/" />
-            </a>
+            </Link>
             <p className="sub">Gadgets & Ipads</p>
           </div>
 
           <div className="">
-            <a href="/">
+            <Link to="/appliances">
               <img src={Fridge} className="icon" alt="/" />
-            </a>
+            </Link>
             <p className="sub">Home Appliances</p>
           </div>
           <div className="">
-            <a href="/">
+            <Link to="/audio">
               <img src={Audio} className="icon" alt="/" />
-            </a>
+            </Link>
             <p className="sub">Audio</p>
           </div>
         </div>
