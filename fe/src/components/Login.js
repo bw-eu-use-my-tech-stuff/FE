@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "../styles/tachyon.css";
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import history from './history';
+
 
 function Login(props) {
   const [user, setUser] = useState({
     username: "",
-    password: ""
+    password: "",
   });
 
   const changeHandler = e => {
@@ -16,6 +16,8 @@ function Login(props) {
       [e.target.name]: e.target.value
     });
   };
+
+
   const submitHandler = e => {
     e.preventDefault();
     console.log(user)
@@ -24,6 +26,7 @@ function Login(props) {
       console.log(response)
       props.history.push('./dashboard')
     }).catch(error => {
+      alert('You must register before logging in.');
       console.log(error)
     }, [])
   };
